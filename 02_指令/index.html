@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue-next/packages/vue/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="my-app">
+
+    11
+    {{name}}
+</div>
+<script>
+    const app = Vue.createApp({
+        template: '#my-app',
+        data() {
+            return {
+                name: '123'
+            }
+        }
+    })
+    app.mount('#my-app')
+</script>
+</body>
+</html>

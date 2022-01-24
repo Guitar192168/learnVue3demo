@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue-next/packages/vue/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+
+    <!--<div>123</div>-->
+    <!--<div>{{message}}</div>-->
+    <template id="my-app">
+        <div>你好</div>
+
+        <div :class="{title:true}">你好</div>
+
+        <input v-model="obj.person.name" type="text">
+        <input v-model="obj2.name" type="text">
+        <input v-model="arr[0]" type="text">
+
+        <div>{{counter}}</div>
+        <button @click="demo">测试</button>
+
+        <div :class="{[title]:false}">你好</div>
+        <div :class="[title]">你好</div>
+        <div class="abc" :class="title">你好</div>
+
+
+        <input type="text" v-model.number="testNumber">
+        {{testNumber}}
+        <label for="testNumber">测试下number修饰符</label>
+        <input id="testNumber" @click="clickNumber" type="radio" v-model.number="testNumber" type="text">
+    </template>
+    <script>
+        const app = Vue.createApp({
+            template: '#my-app',
+            data() {
+                return {
+                    message: '你好',
+                    counter: 0,
+                    title: 'abc',
+                    obj: {
+                        person: {
+                            name: '123'
+                        }
+                    },
+                    obj2: {
+                        name: '222'
+                    },
+                    arr: [111],
+                    testNumber: 1,
+                }
+            },
+            watch: {
+                'obj.person.name'(newVal, oldVal) {
+                    console.log(newVal, oldVal)
+                },
+                obj2: {
+                    handler(newVal, oldVal) {
+                        console.log(newVal, oldVal)
+                    },
+                    deep: true
+                },
+                'obj2.name'(newVal, oldVal) {
+                    console.log(newVal, oldVal)
+                },
+                arr: {
+                    handler(newVal, oldVal) {
+                        console.log(newVal, oldVal)
+                    },
+                    deep: true
+                },
+                testNumber: {
+                    handler(newVal, oldVal) {
+                        console.log(newVal, typeof newVal)
+                    },
+                    deep: true,
+                    immediately: true
+                }
+
+            },
+            mounted() {
+                if (true)
+                    for (let i of [1, 2, 3]) console.log(i);
+            },
+            methods: {
+                demo() {
+                    // if (true) return this.counter = 1;
+                    console.log(this.testNumber, typeof this.testNumber)
+                },
+                inCreament() {
+                    this.counter++;
+                },
+                deCreament() {
+                    this.counter--;
+                },
+                clickNumber() {
+                    console.log('测试number的最开始的类型')
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+
+</html>

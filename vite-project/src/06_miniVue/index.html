@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./renderer.js"></script>
+    <script>
+        // const vNode = h('div', {
+        //     class: 'title'
+        // }, '我是vnode')
+
+        const vNode = h('div',{class:"title"},[
+            h('h1',null,'我是h1, 当前计数100'),
+            // h('button',null,'+1')
+            h('button',{"onClick":function(){
+                console.log('打印');
+            }},"+1")
+        ]);//这里一层层的树结构，就形成了vdom
+
+        console.log(vNode);
+
+        // 错误写法
+        // 应该获取div#app这个dom
+        // mount(vNode,"#app")
+        mount(vNode, document.querySelector('#app'))
+    </script>
+
+</body>
+
+</html>
