@@ -13,34 +13,35 @@
 /**
  *  类型为 'yang'
  */
- const name2 = 'yang'
+const name2 = 'yang'
 
- const name = ('yang' as unknown) as number
- 
- console.log(typeof name)
- 
- /*  举例补充
- * */
- class Person {
-     teaching() {
-         console.log('教书')
-     }
- }
- 
- class Student extends Person {
-     studying() {
-         console.log('学生的专属方法:学习')
-     }
- }
- 
- function foo(user:Person){
-     // user.teaching() 有该方法
-     // user.studying()//Person类型上找不到该方法
-     (user as Student).studying()
- }
- 
- const stu = new Student()
- foo(stu)
- 
- 
- export {}
+const name = ('yang' as unknown) as number
+
+console.log(typeof name)
+
+/*  举例补充
+* */
+class Person {
+    teaching() {
+        console.log('教书')
+    }
+}
+
+class Student extends Person {
+    //  这里构造器+super也不行
+    studying() {
+        console.log('学生的专属方法:学习')
+    }
+}
+
+function foo(user: Person) {
+    // user.teaching() 有该方法
+    //  user.studying()//Person类型上找不到该方法
+    (user as Student).studying()
+}
+
+const stu = new Student()
+foo(stu)
+
+
+export { }
