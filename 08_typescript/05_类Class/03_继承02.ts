@@ -27,3 +27,6 @@ class Student extends Person {
 
 const stu = new Student('zhangsan', 18, 29)
 console.log(stu)
+export  {
+
+}
