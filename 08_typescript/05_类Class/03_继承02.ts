@@ -2,13 +2,13 @@ class Person {
     name: string
     age: number
 
-    constructor(name, age) {
+    constructor(name: string, age: number) {
         this.name = name
         this.age = age
     }
 
     teach() {
-        console.log('person的teach');
+        console.log('Person的teach');
     }
 }
 
@@ -16,18 +16,14 @@ class Student extends Person {
     num: number
 
     constructor(name: string, age: number, num: number) {
-        super()
-        this.num = this.num
+        super(name, age)
+        this.num = num
     }
-    studing() {
-        console.log('student的studing');
+
+    study() {
+        console.log('Student的study');
     }
 }
 
-let stu = new Student('张三', 19, 20)
-console.log(stu);
-
-
-export {
-
-}
+const stu = new Student('zhangsan', 18, 29)
+console.log(stu)
