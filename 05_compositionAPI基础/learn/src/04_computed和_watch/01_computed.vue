@@ -14,7 +14,7 @@ export default {
     const firstName = ref("张");
     const lastName = ref("小");
 
-    // 接收一个getter函数，并且返回一个ref对象      返回一个不变的 ref 对象
+    // 接收一个getter函数，并且返回一个只读的ref对象      ps: 返回一个不变的 ref 对象
     const fullName = computed(() => {
       return firstName.value + " " + lastName.value;
     });
