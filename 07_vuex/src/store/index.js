@@ -14,12 +14,16 @@ const store = new createStore({
         }
     },
     getters: {
-        totalPrice(state, getters) {
-            console.log(getters,'getters')
+        totalPrice(state) {
             return state.booksList.reduce((acc, cur) => {
                 console.log(acc, 'acc', cur, 'cur')
                 return acc + cur.price
             }, 0)
+        },
+        //算出总价后，假设给打8折
+        //    第二个参数
+        totalPrice2(state, getters) {
+            return
         }
     },
     mutations: {
