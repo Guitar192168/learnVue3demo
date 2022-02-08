@@ -1,13 +1,10 @@
 <template>
-  <div>
 
-  </div>
 </template>
 
 <script>
 export default {
-  name: "04_getters",
-  methods: {}
+  name: "05_mapGetters"
 }
 </script>
 
