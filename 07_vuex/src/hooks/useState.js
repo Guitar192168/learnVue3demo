@@ -1,8 +1,10 @@
 import {computed} from "vue";
 import {mapState, useStore} from "vuex";
 
-export default function useState(storeStateFns) {
-    storeStateFns = mapState(storeStateFns)
+export default function useState(storeStateFns, mapFn) {
+    console.log(mapFn)
+    storeStateFns = mapFn(storeStateFns)
+    console.log(storeStateFns)
     const stateStore = {}
     const store = useStore()
     Object.keys(storeStateFns).forEach(fnKey => {

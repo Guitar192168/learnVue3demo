@@ -39,6 +39,12 @@ export default {
     // })
     const store = useStore()
 
+    const storeState33 = mapState({
+      sName1: state => state.name,
+      sAge1: state => state.age
+    })
+
+
     // computed(接收一个函数或者一个对象)
     const sName = computed(() => store.state.name)
     const sAge = computed(() => store.state.age)
@@ -68,7 +74,6 @@ export default {
       }
     }
     //然后...解构出去，页面上就还是函数
-
 
     return {
       store,
