@@ -1,4 +1,5 @@
 import {createStore} from "vuex";
+import {IN_CREMENT, DE_CREMENT} from "./mutations-type";
 
 const store = new createStore({
     // state错误写法
@@ -53,9 +54,24 @@ const store = new createStore({
             // this.this.state.
             state.age++
         },
-        decrement(state, payload) {
+        // decrement(state, payload) {
+        //     console.log(payload, 'payload')
+        //     state.age -= payload.number
+        // },
+        [DE_CREMENT](state, payload) {
             console.log(payload, 'payload')
             state.age -= payload.number
+        }
+    },
+    actions: {
+        increment(context) {
+            console.log(context)
+            context.commit('increment')
+            // 有 commit dispatch getters RootGetters rootState state
+            //    RootGetters rootState其中这两个是比store实例多出来的两个
+        },
+        decrement(context) {
+
         }
     }
 })
