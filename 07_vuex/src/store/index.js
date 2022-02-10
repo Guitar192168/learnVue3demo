@@ -46,13 +46,16 @@ const store = new createStore({
         }
     },
     mutations: {
-        increment(state) {
+        increment(state, payload) {
+            //没传值参数时，默认payload为点击事件的属性
+            console.log(payload, 'payload')
             //错误写法
             // this.this.state.
             state.age++
         },
-        decrement(state) {
-            state.age--
+        decrement(state, payload) {
+            console.log(payload, 'payload')
+            state.age -= payload.number
         }
     }
 })
