@@ -1,4 +1,3 @@
-import {sum} from './math'
 import axios from 'axios'
 
 //如果有被声明过，就不会报错了
@@ -6,10 +5,6 @@ import axios from 'axios'
 //或者  npm i --save-dev @types/lodash
 import _ from 'lodash'
 
+console.log('11122')
 console.log(_.join([1, 2, 3]))
 
-// document.getElementById()
-console.log(sum(1, 2))
-
-console.log(sum(10, 20))
-console.log(sum(10, 1000))

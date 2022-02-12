@@ -1,5 +1,10 @@
-import {createStore} from "vuex";
-import {IN_CREMENT, DE_CREMENT} from "./mutations-type";
+import {
+    createStore
+} from "vuex";
+import {
+    IN_CREMENT,
+    DE_CREMENT
+} from "./mutations-type";
 
 const store = new createStore({
     // state错误写法
@@ -12,7 +17,16 @@ const store = new createStore({
             name: '张三',
             age: 19,
             discount: 0.9,
-            booksList: [{name: '不知道的js', price: 30}, {name: "深入浅出vue", price: 20}, {name: "webpack数书籍", price: 150}]
+            booksList: [{
+                name: '不知道的js',
+                price: 30
+            }, {
+                name: "深入浅出vue",
+                price: 20
+            }, {
+                name: "webpack数书籍",
+                price: 150
+            }]
         }
     },
     getters: {
@@ -52,6 +66,7 @@ const store = new createStore({
             console.log(payload, 'payload')
             //错误写法
             // this.this.state.
+            // 我这里只是++,不管传的是什么值
             state.age++
         },
         // decrement(state, payload) {

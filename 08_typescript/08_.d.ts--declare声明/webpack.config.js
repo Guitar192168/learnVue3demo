@@ -11,7 +11,7 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     devServer: {
-        port: 8002
+        port: 8082
     },
     module: {
         rules: [
