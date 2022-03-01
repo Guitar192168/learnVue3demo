@@ -5,4 +5,9 @@ class Student {
 const stu = Student.age
 console.log(stu)
 
+
+const stu2 = new Student()
+console.log(stu2);
+
+
 export {}

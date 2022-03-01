@@ -7,3 +7,10 @@ declare module 'lodash' {
 //声明变量/函数/类
 declare let codeName: string
 declare let age: number
+
+
+// declare module '*jpg'
+declare module '*jpg' {
+    const src: string
+    export default src
+}
