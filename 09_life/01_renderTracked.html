@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3的生命周期renderTracked</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="add">修改value</button>
+        <p >value {{ value }}</p>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    value: 0
+                }
+            },
+            methods: {
+                add() {
+                    this.value++
+                }
+            },
+            renderTriggered(event){
+                console.log(event);
+                debugger
+            },
+            renderTracked(event) {
+                console.log(event);
+                debugger
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+
+</html>
