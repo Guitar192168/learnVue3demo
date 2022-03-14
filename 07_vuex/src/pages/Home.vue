@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ $store.state.age }}
+    {{ $store.state.a.age }}
   </div>
   <button @click="submitAction">
     提交
@@ -17,7 +17,7 @@ export default {
       this.$store.dispatch('increment')
     },
     demo(){
-      this.$store.commit('increment')
+      this.$store.commit('a/increment')
     }
   }
 }

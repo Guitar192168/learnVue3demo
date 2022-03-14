@@ -1,5 +1,29 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    {{ value }}
+    <button @click="add">添加</button>
   </div>
 </template>
+<script>
+export default {
+  name: 'About',
+  data() {
+    return {
+      value: 0
+    }
+  },
+  created() {
+    console.log(this.$route);
+  },
+  activated() {
+    console.log('activated');
+  },
+  methods: {
+    add() {
+      this.value++
+    }
+  }
+}
+
+</script>

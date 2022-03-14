@@ -2,9 +2,18 @@
   <div id="nav">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>-->
-    <keep-alive>
+
+
+
+    <!-- <keep-alive :include="['About']">
       <router-view />
-    </keep-alive>
+    </keep-alive> -->
+
+     <router-view v-slot="{ Component }">
+      <keep-alive  :include="['About']">
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
   </div>
 </template>
 

@@ -1,36 +1,50 @@
 <template>
   <div class="home">我是Home</div>
-  <div>{{ num }}</div>
-  <button @click="add">增加</button>
+  <!-- <div>{{ num }}</div> -->
+  <!-- <button @click="add">增加</button> -->
   <hr />
   <button @click="to">跳转</button>
 </template>
 
 <script >
-import { ref, } from 'vue'
-import { useRouter } from 'vue-router'
+// import { ref, } from 'vue'
+// import { useRouter } from 'vue-router'
 export default {
-  setup() {
-    name: 'Home';
-    let num = ref(10);
-    const route = useRouter()
-
-    const add = () => {
-      num.value++
-    }
-
-    const to = () => {
-      route.push({
-        path: '/about'
+  activated() {
+    console.log('Home的activated');
+  },
+  methods: {
+    to() {
+      this.$router.push({
+        // path: "/about",
+        name: 'About',
+        query: {
+          name: '约基奇'
+        }
       })
     }
-    return {
-      to,
-      add,
-      num,
-      name
-    }
   }
+  // setup() {
+  //   name: 'Home';
+  //   let num = ref(10);
+  //   const route = useRouter()
+
+  //   const add = () => {
+  //     num.value++
+  //   }
+
+  //   const to = () => {
+  //     route.push({
+  //       path: '/about'
+  //     })
+  //   }
+  //   return {
+  //     to,
+  //     add,
+  //     num,
+  //     name
+  //   }
+  // }
 }
 
 </script>
