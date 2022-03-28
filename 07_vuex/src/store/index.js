@@ -63,11 +63,15 @@ const store = new createStore({
     mutations: {
         increment(state, payload) {
             //没传值参数时，默认payload为点击事件的属性
-            console.log(payload, 'payload')
+            // console.log(payload, 'payload')
             //错误写法
             // this.this.state.
             // 我这里只是++,不管传的是什么值
             state.age++
+            store.commit('demo');
+        },
+        demo(){
+            console.log('111')
         },
         // decrement(state, payload) {
         //     console.log(payload, 'payload')
