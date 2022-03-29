@@ -70,7 +70,7 @@ const store = new createStore({
             state.age++
             store.commit('demo');
         },
-        demo(){
+        demo() {
             console.log('111')
         },
         // decrement(state, payload) {
@@ -91,8 +91,12 @@ const store = new createStore({
         },
         decrement(context) {
 
+        },
+        send(context) {
+            console.log('context', context);
+            context.commit('demo')
         }
-    }
+    },
 })
 
 export default store
