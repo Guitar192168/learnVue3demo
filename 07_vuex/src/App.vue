@@ -8,12 +8,11 @@
 import Home from "./pages/Home";
 export default {
   name: "App",
-  components:{
-    Home
-  }
-}
+  components: {
+    Home,
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
