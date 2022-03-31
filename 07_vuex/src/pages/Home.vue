@@ -1,6 +1,7 @@
 <template>
   <div>
-    {{ $store.state.a.age }}
+    <!-- {{ $store.state.a.age }} -->
+    {{ $store.state.age }}
   </div>
   <button @click="submitAction">提交</button>
   <button @click="demo">测试一下mutation修改状态的监听，快照</button>
@@ -13,7 +14,9 @@ export default {
       this.$store.dispatch("increment");
     },
     demo() {
-      this.$store.commit("a/increment");
+      // this.$store.commit("a/increment");
+      // this.$store.commit("a/increment");
+      this.$store.dispatch("send");
     },
   },
 };
