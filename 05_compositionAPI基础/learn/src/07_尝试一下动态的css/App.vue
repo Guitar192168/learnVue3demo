@@ -15,7 +15,7 @@ export default {
 };
 </script>>
 
-<style>
+<style scoped>
 .title {
   color: v-bind("obj.name");
 }

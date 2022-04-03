@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue-next/packages/vue/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<script>
+    const vnode = {
+        tag: 'p', // tag这里需要加引号
+        attr:{
+            // 'class':'title'
+            className:'title' // class这里是className
+        },
+        children:'写一个vNode结构'
+    }
+</script>
+<body>
+
+<div id="app"></div>
+
+<template id="id">
+    <p>写一个vNode结构</p>
+    <div class="title">{{foo}}</div>
+    <div class="father">
+        <p>
+
+        </p>
+    </div>
+    <button @click="foo = 2">按钮</button>
+</template>
+<script>
+    // Object.freeze(obj)
+    const app = Vue.createApp({
+        template: "#id",
+        data() {
+            return {
+                foo: 1
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>
+</body>
+
+</html>
