@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令们</title>
+    <script src="../vue-next/packages/vue/dist/vue.global.js"></script>
+
+</head>
+<body>
+<div id="app"></div>
+
+<template id="id">
+    <button @click="changeVOnceName">尝试切换，看看v-once</button>
+    <!--    <div v-if="isShow">-->
+    <!--    v-once 只会渲染一次，不会随着数据修改而改变-->
+    <div v-once>{{name}}</div>
+    <div v-once>
+        <h2>{{name}}子组件也是如此，只渲染一次</h2>
+    </div>
+    <div>{{name}}</div>
+    <div>{{user}}</div>
+    <button @click="addUserKey">尝试给user对象新增一个属性</button>
+    <!--    </div>-->
+</template>
+<script>
+    const app = Vue.createApp({
+        template: "#id",
+        data() {
+            return {
+                isShow: true,
+                name: 123,
+                user: {
+                    name: 789,
+                    age: 18
+                }
+            }
+        },
+        methods: {
+            changeVOnceName() {
+                this.name = 456
+                // this.$set(this.data, 'name', 456)// 不能用这个,vue3移除了这个功能
+            },
+            addUserKey() {
+                this.user.sex = 1
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>
+</body>
+</html>

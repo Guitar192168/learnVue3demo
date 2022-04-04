@@ -9,13 +9,29 @@
     <title>Document</title>
 </head>
 <script>
-    const vnode = {
+    const vNode = {
         tag: 'p', // tag这里需要加引号
-        attr:{
+        attr: {
             // 'class':'title'
-            className:'title' // class这里是className
+            className: 'title' // class这里是className
         },
-        children:'写一个vNode结构'
+        children: '写一个vNode结构'
+    }
+
+    const vNode2 = {
+        tag: 'div',
+        attr: {
+            id: 'header'
+        },
+        children: [
+            {
+                tag: 'p',
+                attr: {
+                    className: 'title',
+                    children: 'vNode放在children里面的内容'
+                }
+            }
+        ]
     }
 </script>
 <body>
@@ -24,10 +40,10 @@
 
 <template id="id">
     <p>写一个vNode结构</p>
-    <div class="title">{{foo}}</div>
-    <div class="father">
-        <p>
-
+    <p class="title">{{foo}}</p>
+    <div id="header">
+        <p class="title">
+            vNode放在children里面的内容
         </p>
     </div>
     <button @click="foo = 2">按钮</button>
