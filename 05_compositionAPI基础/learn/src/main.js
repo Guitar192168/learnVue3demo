@@ -22,9 +22,12 @@ import format from './02_自定义指令/format.js';
 // import App from './04_computed和_watch/03_ref.vue'
 // import App from './04_computed和_watch/04_watch.vue'
 // import App from './04_computed和_watch/05_watch监听多个数据源.vue'
-import App from './07_尝试一下动态的css/App'
+// import App from './07_尝试一下动态的css/App'
 // import App from './05_h函数和render函数的使用/01_vue2和在setup使用h函数.vue'
 // import App from './05_h函数和render函数的使用/02_h函数里导入子组件.vue'
+// import App from './05_h函数和render函数的使用/001_render函数的基本使用'
+import App from './05_h函数和render函数的使用/002_render函数实现计数器'
+
 const app = createApp(App)
 
 format(app)
