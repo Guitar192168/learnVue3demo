@@ -1,1 +1,0 @@
-(()=>{var o={492:o=>{o.exports={foo:function(){return"我是common.js的语法"}}}},r={};function t(e){var n=r[e];if(void 0!==n)return n.exports;var s=r[e]={exports:{}};return o[e](s,s.exports,t),s.exports}(()=>{"use strict";let{foo:o}=t(492);console.log(3),console.log(o())})()})();
