@@ -7,6 +7,10 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vue-next/packages/vue/dist" />
       <excludeFolder url="file://$MODULE_DIR$/07_vuex/demo22" />
+      <excludeFolder url="file://$MODULE_DIR$/03_webpack/04_vite/viteDemo" />
+      <excludeFolder url="file://$MODULE_DIR$/03_webpack/04_webpack_babel/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/05_compositionAPI基础/learn" />
+      <excludeFolder url="file://$MODULE_DIR$/09_父子组件的生命周期" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
