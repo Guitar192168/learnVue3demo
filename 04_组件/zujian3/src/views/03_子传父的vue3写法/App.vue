@@ -15,9 +15,9 @@ const addNum = (params) => {
   // 可以直接拿到参数的
   num.value += params
 }
-const subNum = ({name, num: number}) => {
+const subNum = ({name, num}) => {
   console.log(num)
-  num.value -= number
+  num.value -= num.value
 }
 // const subNum = (params) => {
 //   console.log(params)
