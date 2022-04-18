@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import { log } from "console";
 import { reactive, watch } from "vue";
 
 export default {
