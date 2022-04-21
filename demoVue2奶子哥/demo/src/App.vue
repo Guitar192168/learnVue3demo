@@ -1,18 +1,24 @@
 <template>
-  <pagination v-model="page"></pagination>
-  <div v-loading="loading"></div>
-</template>
+  <div id="app">
+    <div style="height: 200px;width: 200px" v-loading="loading"></div>
+<!--        <Home></Home>-->
+    <div>
+    检查是否是默认值
+  </div>
 
+  </div>
+
+</template>
 <script>
-import pagination from './Pagination.vue'
+import Home from './views/Home'
 
 export default {
   components: {
-    pagination
+    Home
   },
   data() {
     return {
-      page: 1
+      loading: true
     }
   }
 }
