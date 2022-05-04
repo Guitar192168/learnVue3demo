@@ -52,9 +52,12 @@ export default {
      */
     // 其实，还可以重叠，多个watch监听同一个对象，也不会冲突，覆盖，都会执行的
     watch(
-      () => {
-        return {...info};
-      },
+      // 两种写法
+      // () => {
+      //   return {...info};
+      // },
+      () => ({...info}), // 监听函数直接返回一个对象的时候，需要加个(),要么就是得包个大括号{} 里面再去return 这个{}出来
+      //不加的话不知道是{}是函数的执行体{}，还是要返回的对象{}
       (newValue, oldValue) => {
         console.log(newValue, "普通对象的newValue", oldValue, "普通对象的oldValue")
       }
