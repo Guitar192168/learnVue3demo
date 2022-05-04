@@ -22,10 +22,10 @@ import App from './02_自定义指令/自定义format指令.vue'
 // import App from './03_其他ref的api的补充/01_shallowRef浅层的ref对象.vue'
 // import App from './03_其他ref的api的补充/02_shallowReadOnly.vue'
 // import App from './04_computed和_watch/01_computed.vue'
-// import App from './04_computed和_watch/02_watchEffect.vue'
+// import App from './04_computed和_watch/02_watchEffect自动收集监听和如何停止.vue'
 // import App from './04_computed和_watch/03_ref和watchEffect执行时机.vue'
-// import App from './04_computed和_watch/04_watch.vue'
-// import App from './04_computed和_watch/05_watch监听多个数据源.vue'
+// import App from './04_computed和_watch/05_watch.vue'
+// import App from './04_computed和_watch/06_watch监听多个数据源.vue'
 
 
 

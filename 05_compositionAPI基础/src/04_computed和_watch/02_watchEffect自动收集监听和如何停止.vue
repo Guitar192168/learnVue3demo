@@ -10,14 +10,19 @@
 </template>
 
 <script>
-import { ref, reactive, watchEffect } from "vue";
-import { log } from "console";
+import {ref, reactive, watchEffect} from "vue";
+import {log} from "console";
+
 export default {
   setup() {
     const age = ref(18);
     const name = ref("张三");
 
-    // 可以执行stopWatch来清除监听
+    /**
+     * watchEffect 会自动的收集使用到的属性
+     *  不用刻意指定侦听哪个属性，只要你在回调函数里，有使用到那个响应式数据ref/reactive就会自动监听到
+     *   获取watchEffect返回值的函数 可以执行stopWatch来清除监听
+     */
     const stopWatch = watchEffect((onInvaidate) => {
       const timer = setTimeout(() => {
         console.log("网络请求");
@@ -35,7 +40,7 @@ export default {
     const changeAge = () => {
       age.value++;
 
-      if (age.value > 50) {
+      if (age.value > 22) {
         stopWatch();
       }
     };
