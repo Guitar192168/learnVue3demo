@@ -6,8 +6,8 @@
     <button @click="changeInfo">
       看一下watch的那个newValue和oldValue为啥是一样的
     </button>
-    <hr />
-    <br />
+    <hr/>
+    <br/>
     子组件的页面
     <div>
       <!-- <slot name="title">子组件插槽默认值</slot> -->
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { reactive, watch } from "vue";
+import {reactive, watch} from "vue";
 
 export default {
   name: "Home",
@@ -39,24 +39,24 @@ export default {
   },
   setup(props, context) {
     const namesArr = reactive(["kobe", "curry", "iryne"]);
-
-    const info = reactive({ name: "kobe", age: "18" });
+    console.log('子组件的数据context.attrs', context.attrs)
+    const info = reactive({name: "kobe", age: "18"});
     const changeInfo = () => {
       info.name = "yang";
     };
 
     watch(
-      () => ({ ...info }),
+      () => ({...info}),
       (newValue, oldValue) => {
         console.log("newValue:", newValue, "oldValue:", oldValue);
       }
     );
 
-    console.log(props);
-    console.log(context.attrs); // 四个均是非响应式对象，等同于$attrs，没有被使用的props
-    console.log(context.slots);
-    console.log(context.emit);
-    console.log(context.expose);
+    // console.log(props);
+    // console.log(context.attrs); // 四个均是非响应式对象，等同于$attrs，没有被使用的props
+    // console.log(context.slots);
+    // console.log(context.emit);
+    // console.log(context.expose);
 
     return {
       namesArr,
