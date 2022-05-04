@@ -14,8 +14,8 @@ export default {
     // console.log(title.value, "title");
     /**
      * 执行时机，watchEffect里两个参数，第二个参数是配置flush
-     * 默认值是pre，表示预先加载，提前加载。会出现null
-     * 而改为post则不会。
+     * 默认值是pre，表示预先加载，是在挂载或者更新之前执行的。这里监听DOM元素。是会先显示null的。
+     * 而改为post则不会。等挂载完或者更新完才执行。
      * 还有个默认值sync，强制同步，不太推荐。
      */
     watchEffect(
@@ -23,7 +23,7 @@ export default {
         console.log(title.value);
       },
       {
-        // flush:'pre'//默认是pre, 是会提前执行，无论dom挂载完毕
+        // flush:'pre'// 默认是pre, 是在挂载或者更新之前执行的。这里监听DOM元素。是会先显示null的。
         flush: "post", //这样就不会先出现null了
       }
     );
