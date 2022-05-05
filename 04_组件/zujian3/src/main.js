@@ -13,8 +13,11 @@ import { createApp } from 'vue'
 // import App from '../src/views/13_动态插槽/App'
 // import App from './Pagination'
 // import App from '../src/views/13_动态插槽/App'
-import App from '../src/views/14_css和模板对于图片的处理/App'
+// import App from '../src/views/14_css和模板对于图片的处理/App'
+import App from '../src/views/15_父子组件/App'
 import router from './router'
 import store from './store'
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
 
 createApp(App).use(store).use(router).mount('#app')

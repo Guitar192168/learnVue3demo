@@ -31,14 +31,17 @@ export default {
   },
   created() {
     let x = new Big(12255.21)
-    console.log(x)
-    console.log(x.times(19.5).toNumber())
+    let y = new Big(194939.425)
+    // console.log(x)
+    // console.log(x.times(19.5).toFixed(2))
+    console.log(y.toFixed(2))
   },
   methods:{
     test(){
       return new Promise((resolve, reject) => {
-        // resolve('我是结果')
-        reject('错误')
+        resolve('我是结果')
+
+        // reject('错误')
       })
     },
     async getList(){

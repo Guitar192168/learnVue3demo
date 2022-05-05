@@ -1,13 +1,14 @@
 <template>
-  <div id="app">
-    <div ref="user">父组件
-      <child></child>
-    </div>
-  </div>
+  <child></child>
+<!--  <div ref="user">父组件</div>-->
+
 </template>
+
 <script>
 import child from "./child";
+
 export default {
+  name: "App",
   components: {
     child
   },
@@ -16,6 +17,8 @@ export default {
   },
 
 }
-
 </script>
 
+<style scoped>
+
+</style>
