@@ -8,16 +8,17 @@
 </template>
 
 <script>
-import { ref, computed } from "@vue/runtime-core";
+import {ref, computed} from "@vue/runtime-core";
+
 export default {
   setup() {
     const firstName = ref("张");
     const lastName = ref("小");
 
     // 接收一个getter函数，并且返回一个只读的ref对象      ps: 返回一个不变的 ref 对象
-    const fullName = computed(() => {
-      return firstName.value + " " + lastName.value;
-    });
+    let fullName = computed(() => {
+      return firstName.value + ' ' + lastName.value
+    })
 
     // set和get
     const allName = computed({
@@ -35,7 +36,11 @@ export default {
     const changeName = () => {
       //   firstName.value = "james";
       //   lastName.value = "kobe";
-      //   fullName.value = "修改computed的name";
+
+      console.log('因为computed返回的是一个ref对象，所以如果想修改computed的值，不能直接赋值修改。需要 .value来修改');
+      console.log('computed返回的确实是个只读的ref，Write operation failed: computed value is readonly')
+      // fullName = '123'
+      // fullName.value = "修改computed的name";
       allName.value = "修改computed的name"; //这个修改的值会给到set函数里的newValue
     };
 

@@ -1,21 +1,28 @@
 <template>
   <div id="app">
-    <div ref="user">父组件
-      <child></child>
+
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      |
+      <router-link to="/about">About</router-link>
     </div>
   </div>
 </template>
 <script>
-import child from "./child";
 export default {
-  components: {
-    child
-  },
-  mounted() {
-    console.log(this.$refs.user, '父组件')
-  },
-
+  methods: {
+    demo() {
+      console.log('123')
+    }
+  }
 }
-
 </script>
-
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+</script>
