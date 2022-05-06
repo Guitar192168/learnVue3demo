@@ -9,10 +9,15 @@
 <script setup>
 import home from "./home.vue";
 import {ref} from 'vue'
+
 const child = ref(null)
+const father = ref(789)
 const show = () => {
   console.log(child.value.name)
 }
+defineExpose(({
+  father
+}))
 </script>
 
 <style scoped>

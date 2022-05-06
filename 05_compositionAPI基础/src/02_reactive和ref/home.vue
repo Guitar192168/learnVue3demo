@@ -2,13 +2,23 @@
   <div>
     我是子组件
     {{name}}
+
+    <hr>
+    <button @click="show">获取父组件的暴露的值</button>
   </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {ref, getCurrentInstance} from 'vue'
 
 const name = ref(123)
+const vm = getCurrentInstance()
+
+const show = () => {
+  console.log(vm.$parent,'这里直接是undefined了')
+  console.log('vm.$parent', vm.parent.exposed.father.value)
+  console.log('vm.$parent', vm.parent.exposeProxy.father)
+}
 defineExpose({
   name
 })
