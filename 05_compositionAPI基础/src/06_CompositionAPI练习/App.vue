@@ -13,7 +13,6 @@
       <div>mouseX:{{mouseX}}</div>
       <div>mouseY:{{mouseY}}</div>
     </div>
-
     <hr>
     {{res}}
   </div>
