@@ -28,12 +28,13 @@ import format from './02_自定义指令/format.js';
 // import App from './04_computed和_watch/04_watchEffect的副作用.vue'
 // import App from './04_computed和_watch/05_watch.vue'
 // import App from './04_computed和_watch/06_watch监听多个数据源.vue'
-import App from './04_computed和_watch/07_provide和inject的vue写法.vue'
+// import App from './04_computed和_watch/07_provide和inject的vue写法.vue'
+import App from './05_生命周期钩子/App'
 // import App from './08_尝试一下动态的css/App'
-// import App from './06_h函数和render函数的使用/01_vue2和在setup使用h函数.vue'
-// import App from './06_h函数和render函数的使用/02_h函数里导入子组件.vue'
-// import App from './06_h函数和render函数的使用/001_render函数的基本使用'
-// import App from './06_h函数和render函数的使用/002_render函数实现计数器'
+// import App from './07_h函数和render函数的使用/01_vue2和在setup使用h函数.vue'
+// import App from './07_h函数和render函数的使用/02_h函数里导入子组件.vue'
+// import App from './07_h函数和render函数的使用/001_render函数的基本使用'
+// import App from './07_h函数和render函数的使用/002_render函数实现计数器'
 
 const app = createApp(App)
 // const app ={
