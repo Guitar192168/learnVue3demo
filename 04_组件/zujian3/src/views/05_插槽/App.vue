@@ -40,14 +40,11 @@
   <hr>
     <child :name="name">
 <!--      <template v-slot:[name]>我是动态插槽</template>-->
-
-
       <template #[name]>
         <h2>我是动态插槽的简写</h2>
       </template>
       <template v-slot:[name]>我是动态插槽</template>
       <template v-slot:[name]>我是动态插槽</template>
-
     </child>
 </template>
 

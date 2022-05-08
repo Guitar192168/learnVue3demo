@@ -29,8 +29,8 @@ import App from './02_自定义指令/自定义format指令.vue'
 
 
 
-// import App from './05_h函数和render函数的使用/01_vue2和在setup使用h函数.vue'
-// import App from './05_h函数和render函数的使用/02_h函数里导入子组件.vue'
+// import App from './06_h函数和render函数的使用/01_vue2和在setup使用h函数.vue'
+// import App from './06_h函数和render函数的使用/02_h函数里导入子组件.vue'
 const app = createApp(App)
 
 format(app)
