@@ -37,7 +37,10 @@ import format from './02_自定义指令/format.js';
 // import App from './07_h函数和render函数的使用/002_render函数实现计数器'
 
 // import App from './07_render函数和h函数的使用/01_render函数的基本使用'
-import App from './07_render函数和h函数的使用/02_render函数使用子组件'
+// import App from './07_render函数和h函数的使用/02_render函数使用子组件'
+// import App from './07_render函数和h函数的使用/03_JSX的使用'
+// import App from './07_render函数和h函数的使用/04_optionsAPI的JSX写法'
+import App from './07_render函数和h函数的使用/05_JSX的插槽'
 
 
 // import App from './08_尝试一下动态的css/App'
