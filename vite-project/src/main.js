@@ -16,7 +16,7 @@ import format from './02_自定义指令/format.js';
 // import App from './01_setup的两个参数/01_App.vue';
 // import App from './02_reactive和ref/01_App.vue'
 // import App from './02_reactive和ref/测试新的ref与reactive的关系.vue'
-// import App from './02_自定义指令/01_App.vue'
+// import App from './08_自定义指令/01_App.vue'
 import App from './02_自定义指令/自定义format指令.vue'
 // import App from './03_其他ref的api的补充/01_App.vue'
 // import App from './03_其他ref的api的补充/01_shallowRef浅层的ref对象.vue'

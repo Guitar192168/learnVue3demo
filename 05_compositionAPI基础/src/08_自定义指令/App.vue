@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script >
+<script>
 import { onMounted, onBeforeMount } from "vue";
 // import children from "./children.vue";
 export default {

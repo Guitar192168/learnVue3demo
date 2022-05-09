@@ -1,7 +1,8 @@
 import {
   createApp
 } from 'vue';
-import format from './02_自定义指令/format.js';
+import format from './08_自定义指令/format.js';
+import {registerDirective} from "@/08_自定义指令/directives";
 
 // import App from './01_mixin和extends/App'
 // import App from './00_demo/01_App.vue'
@@ -17,8 +18,8 @@ import format from './02_自定义指令/format.js';
 // import App from './02_reactive和ref/06_customRef.vue'
 // import App from './02_reactive和ref/07_ref获取其他组件.vue'
 // import App from './02_reactive和ref/测试新的ref与reactive的关系.vue'
-// import App from './02_自定义指令/01_App.vue'
-// import App from './02_自定义指令/自定义format指令.vue'
+// import App from './08_自定义指令/01_App.vue'
+// import App from './08_自定义指令/自定义format指令.vue'
 // import App from './03_其他ref的api的补充/01_App.vue'
 // import App from './03_其他ref的api的补充/01_shallowRef浅层的ref对象.vue'
 // import App from './03_其他ref的api的补充/02_shallowReadOnly.vue'
@@ -40,7 +41,12 @@ import format from './02_自定义指令/format.js';
 // import App from './07_render函数和h函数的使用/02_render函数使用子组件'
 // import App from './07_render函数和h函数的使用/03_JSX的使用'
 // import App from './07_render函数和h函数的使用/04_optionsAPI的JSX写法'
-import App from './07_render函数和h函数的使用/05_JSX的插槽'
+// import App from './07_render函数和h函数的使用/05_JSX的插槽'
+
+// import App from './08_自定义指令/01_最基本的focus'
+// import App from './08_自定义指令/02_最基本的focus之setup语法糖写法'
+// import App from './08_自定义指令/03_局部指令'
+import App from './08_自定义指令/04_自定义时间戳转换'
 
 
 // import App from './08_尝试一下动态的css/App'
@@ -64,5 +70,13 @@ const app = createApp(App)
 // })
 
 format(app)
+
+registerDirective(app)
+// app.directive('focus', {
+//   mounted(el) {
+//     console.log(el, '全局的el')
+//     el.focus()
+//   }
+// })
 
 app.mount('#app');
