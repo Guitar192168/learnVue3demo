@@ -1,7 +1,9 @@
 <template>
-  <div v-format-time>
-    {{new Date().getTime()}}
+  <div v-format-time="'YYYY:MM:DD'">
+<!--    {{new Date().getTime()}}-->
+    1652066617275
   </div>
+  <div v-format-time>1652066617275</div>
 </template>
 
 <script>

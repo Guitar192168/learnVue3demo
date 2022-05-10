@@ -46,11 +46,21 @@ import {registerDirective} from "@/08_自定义指令/directives";
 // import App from './08_自定义指令/01_最基本的focus'
 // import App from './08_自定义指令/02_最基本的focus之setup语法糖写法'
 // import App from './08_自定义指令/03_局部指令'
-import App from './08_自定义指令/04_自定义时间戳转换'
+// import App from './08_自定义指令/04_组件的生命周期'
+// import App from './08_自定义指令/05_指令的参数和修饰符'
+// import App from './08_自定义指令/06_自定义时间戳转换'
 
+import App from './10_插件use/01_两种写法之对象写法'
+import pluginsObject from './10_插件use/plugins/pluginObject'
+import pluginFunction from './10_插件use/plugins/pluginFunction'
 
 // import App from './08_尝试一下动态的css/App'
 const app = createApp(App)
+
+// 通过对象形式注册的插件
+app.use(pluginsObject)
+// 通过function形式注册的插件
+app.use(pluginFunction)
 // const app ={
 //   mixin:function (){
 //
