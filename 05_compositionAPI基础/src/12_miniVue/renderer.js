@@ -47,15 +47,18 @@ const mount = (vNode, container) => {
 }
 
 const patch = (n1, n2) => {
+  // ??
   let el = n2.el = n1.el
   //1. 处理tag
   //如果两个vNode的tag不同，不是同一类型的则直接移除旧节点。挂载新节点
   // 移除，是n1的el的父组件，这里指div#app
   if (n1.tag !== n2.tag) {
+    //这里则需要用父级div#app出面来移除旧的最外层的节点   与下面的直接el来移除不同
     const parentEl = n1.el.parentElement
     parentEl.removeChild(el)
     mount(n2, parentEl)
   } else {
+    //同样的tags时
     // 2. 处理props
     let oldProps = n1.props
     let newProps = n2.props
@@ -87,8 +90,9 @@ const patch = (n1, n2) => {
     if (n2.children) {
       if (typeof n2.children === 'string') {
         if (typeof n1.children === 'string') {
-          el.textContent = n2.children
+          el.textContent = n2.children //是相同的string类型的话，简单修改一下textContent即可
         } else {
+          // 旧的不是string类型，则innerHTML置为空
           el.innerHTML = ''
           el.textContent = n2.children
         }
@@ -99,7 +103,7 @@ const patch = (n1, n2) => {
         let oldChildren = n1.children
         let newChildren = n2.children
         const minLength = Math.min(oldChildren.length, newChildren.length)
-        // 如果n2的newChildren少, 而b1的newChild多
+        // 如果n2新的的newChildren少, 而b1的oldChildren多
         if (minLength === newChildren.length) {
           for (let index in newChildren) {
             patch(oldChildren[index], newChildren[index])
