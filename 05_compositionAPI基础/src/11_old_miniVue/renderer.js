@@ -13,7 +13,7 @@ const h = (tag, props, children) => {
 //自己写的时候思维逻辑没有考虑到挂载到某个元素上，只想到了需要挂载
 // 传入一个container，此案例里是挂载到div#app上
 const mount = (vnode, container) => {
-  console.log(vnode, container);
+  // console.log(vnode, container);
   // 1.vnode ---> element 创造出真实的元素
   // const el = document.createElement(vnode.tag)
   const el = vnode.el = document.createElement(vnode.tag)

@@ -15,7 +15,7 @@ function h(tag, props, children) {
 
 const mount = (vNode, container) => {
   const el = vNode.el = document.createElement(vNode.tag)
-  console.log(el, 'el')
+  // console.log(el, 'el')
 
   //props
   if (vNode.props) {
@@ -116,7 +116,7 @@ const patch = (n1, n2) => {
         } else {
           // 如果n1的oldChildren少。 n2的newChildren多
           for (let index in oldChildren) {
-            console.log('itemOld', index)
+            // console.log('itemOld', index)
             patch(oldChildren[index], newChildren[index])
           }
           // 多出来的要继续挂载上去

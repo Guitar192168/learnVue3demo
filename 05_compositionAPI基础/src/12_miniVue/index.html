@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="./02_reactive.js"></script>
 </head>
 <body>
 <div id="app"></div>
+
 <script src="./renderer.js">
     // 错误，不应该在这个引入的script内写代码   （忘了姬成说的哪个这里面可以写代码了
     h('div', {class: 'title'}, 'hello')
@@ -22,32 +24,34 @@
 
     mount(n1, document.getElementById('app'))
 
+    mount(h('div', null, `${info.age}`), document.getElementById('app'))
 
-    const n2 = h('div', {class: 'title', id: '123',}, [
-        h('h2', {
-            onClick: function () {
-                console.log('n2的click')
-            }
-        }, '我是n2的+1按钮'),
-        h('i', {id: 'myId'}, '我是n2的id'),
-        h('div', null, [
-            h('h2', null, '测试一下深层的')
-        ])
-    ])
-
-
-    //n1 n2不同tag
-    // const n2 = h('h5', {class: 'title', id: '123'}, '我是n2, 我的tag与n1不同')
-
-    // n1 n2同tag， n2的children是string类型
-    // const n2 = h('div', {class: 'title', id: '123'}, '我是n2, 我的tag与n1相同')
-
-    // n1 n2同tag  n2的children是数组类型。且n2的children.length小于n1的
-    // const n2 = h('div', {class: 'title', id: '123'}, [
-    //     h('h2', null, '我是n2的children内的')
+    //
+    // const n2 = h('div', {class: 'title', id: '123',}, [
+    //     h('h2', {
+    //         onClick: function () {
+    //             console.log('n2的click')
+    //         }
+    //     }, '我是n2的+1按钮'),
+    //     h('i', {id: 'myId'}, '我是n2的id'),
+    //     h('div', null, [
+    //         h('h2', null, '测试一下深层的')
+    //     ])
     // ])
-
-    patch(n1, n2)
+    //
+    //
+    // //n1 n2不同tag
+    // // const n2 = h('h5', {class: 'title', id: '123'}, '我是n2, 我的tag与n1不同')
+    //
+    // // n1 n2同tag， n2的children是string类型
+    // // const n2 = h('div', {class: 'title', id: '123'}, '我是n2, 我的tag与n1相同')
+    //
+    // // n1 n2同tag  n2的children是数组类型。且n2的children.length小于n1的
+    // // const n2 = h('div', {class: 'title', id: '123'}, [
+    // //     h('h2', null, '我是n2的children内的')
+    // // ])
+    //
+    // patch(n1, n2)
 
 </script>
 </body>
