@@ -50,7 +50,10 @@ import {registerDirective} from "@/08_自定义指令/directives";
 // import App from './08_自定义指令/05_指令的参数和修饰符'
 // import App from './08_自定义指令/06_自定义时间戳转换'
 
-import App from './10_插件use/App'
+// import App from './10_插件use/App'
+
+import App from './wx/App'
+
 
 
 import pluginsObject from './10_插件use/plugins/pluginObject'
