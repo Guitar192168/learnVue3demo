@@ -74,25 +74,25 @@ function getDep(target, key) {
 }
 
 let info = reactive({name: 'yang', age: 1})
-watchEffect(function Double() {
-    console.log(info.age * 2, info.name);
-  }
-)
+// watchEffect(function Double() {
+//     console.log(info.age * 2, info.name);
+//   }
+// )
 
 watchEffect(function () {
     console.log(info.age * info.age);
   }
 )
 
-watchEffect(function () {
-  console.log(11)
-})
+// watchEffect(function () {
+//   console.log(11)
+// })
 
 // dep.addEffect(Double)
 info.age = info.age + 2
 // dep.notify()
 //
-info.name = 'ji'
+// info.name = 'ji'
 /**
  * 这样的坏处就是比如info对象里面有name和age，但是某个函数只用到了name，另一个函数只用到了age。但是我们之间把整个函数进行了跟踪
  * 导致如果只是age变化了，但是会通知到所有函数都去更新。我们希望能只通知到使用了info.age的这个函数

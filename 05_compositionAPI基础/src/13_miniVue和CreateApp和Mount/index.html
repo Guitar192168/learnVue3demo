@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const app = {
+        data: {
+            count: 0
+        },
+        render() {
+            h('div', null, [
+                h('button', {
+                    onClick: function () {
+                        this.data.count++
+                    }
+                }, "+1")
+            ])
+        }
+    }
+</script>
+</body>
+</html>
