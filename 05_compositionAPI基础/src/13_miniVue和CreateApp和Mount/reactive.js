@@ -64,19 +64,19 @@ function getDep(target, key) {
   return dep
 }
 
-const info = reactive({name: 'yang', age: 18})
-const bar = reactive({num: 123})
-
-watchEffect(function () {
-  console.log(info.name, 'info.name')
-})
-
-watchEffect(function () {
-  console.log(info.age + 1, 'info.age+1')
-})
-
-watchEffect(function () {
-  console.log(bar.num, 'bar.num')
-})
-
-bar.num = bar.num + 1
+// const info = reactive({name: 'yang', age: 18})
+// const bar = reactive({num: 123})
+//
+// watchEffect(function () {
+//   console.log(info.name, 'info.name')
+// })
+//
+// watchEffect(function () {
+//   console.log(info.age + 1, 'info.age+1')
+// })
+//
+// watchEffect(function () {
+//   console.log(bar.num, 'bar.num')
+// })
+//
+// bar.num = bar.num + 1

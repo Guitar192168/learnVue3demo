@@ -13,18 +13,19 @@
     h('div', {class: 'title'}, 'hello')
 </script>
 <script>
-    const n1 = h('div', {class: 'title'}, [
-        h('strong', {
-            onClick: function () {
-                console.log('测试一下点击事件')
-            }, class: 'header'
-        }, '+1'),
-        h('h2', null, '疯四')
-    ])
+    // const n1 = h('div', {class: 'title'}, [
+    //     h('strong', {
+    //         onClick: function () {
+    //             console.log('测试一下点击事件')
+    //         }, class: 'header'
+    //     }, '+1'),
+    //     h('h2', null, '疯四')
+    // ])
 
+    const n1 = h('div', null, '旧节点是字符串')
     mount(n1, document.getElementById('app'))
 
-    mount(h('div', null, `${info.age}`), document.getElementById('app'))
+    // mount(h('div', null, `${info.age}`), document.getElementById('app'))
 
     //
     // const n2 = h('div', {class: 'title', id: '123',}, [
@@ -44,14 +45,14 @@
     // // const n2 = h('h5', {class: 'title', id: '123'}, '我是n2, 我的tag与n1不同')
     //
     // // n1 n2同tag， n2的children是string类型
-    // // const n2 = h('div', {class: 'title', id: '123'}, '我是n2, 我的tag与n1相同')
+    const n2 = h('div', {class: 'title', id: '123'}, '我是n2, 我的tag与n1相同')
     //
     // // n1 n2同tag  n2的children是数组类型。且n2的children.length小于n1的
     // // const n2 = h('div', {class: 'title', id: '123'}, [
     // //     h('h2', null, '我是n2的children内的')
     // // ])
     //
-    // patch(n1, n2)
+    patch(n1, n2)
 
 </script>
 </body>

@@ -5,21 +5,44 @@
     <title>Title</title>
 </head>
 <body>
+<script src="./reactive.js"></script>
+<script src="./renderer.js"></script>
+<script src="./createApp.js"></script>
+<div id="app"></div>
 <script>
-    const app = {
-        data: {
+    const App = {
+        data: reactive({
             count: 0
-        },
+        }),
         render() {
-            h('div', null, [
+            // h('div', null, [
+            //     h('button', {
+            //         onClick: function () {
+            //             this.data.count++
+            //         }
+            //     }, "+1")
+            // ])
+
+            //需要有return
+            return h('div', null, [
+                h('h2', null, `${this.data.count}`),
                 h('button', {
-                    onClick: function () {
+                    // onClick: function () {
+                    //     this.data.count++
+                    // }
+                    onClick: () => {
+                        console.log(this)
                         this.data.count++
                     }
                 }, "+1")
             ])
         }
     }
+
+    // createApp(App).mount("#app")
+    const app = createApp(App)
+    //所以自定义的createApp需要支持返回一个对象
+    app.mount('#app')
 </script>
 </body>
 </html>

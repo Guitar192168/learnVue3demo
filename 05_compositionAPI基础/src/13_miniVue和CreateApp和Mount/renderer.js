@@ -16,7 +16,6 @@ function h(tag, props, children) {
 const mount = (vNode, container) => {
   const el = vNode.el = document.createElement(vNode.tag)
   // console.log(el, 'el')
-
   //props
   if (vNode.props) {
     for (let key in vNode.props) {
@@ -49,6 +48,7 @@ const mount = (vNode, container) => {
 const patch = (n1, n2) => {
   // ??
   let el = n2.el = n1.el
+  console.log(el)
   //1. 处理tag
   //如果两个vNode的tag不同，不是同一类型的则直接移除旧节点。挂载新节点
   // 移除，是n1的el的父组件，这里指div#app
