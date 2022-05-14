@@ -10,6 +10,7 @@
 <script src="./createApp.js"></script>
 <div id="app"></div>
 <script>
+    // 1.创建根组件
     const App = {
         data: reactive({
             count: 0
@@ -41,6 +42,7 @@
         }
     }
 
+    // 2. 挂载根组件
     // createApp(App).mount("#app")
     const app = createApp(App)
     //所以自定义的createApp需要支持返回一个对象

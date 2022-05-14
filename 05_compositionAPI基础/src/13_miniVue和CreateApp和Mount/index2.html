@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="./renderer.js"></script>
+<script src="./reactive.js"></script>
+<script src="./createApp2.js"></script>
+<script>
+    const App = {
+        data: reactive({
+            num: 1
+        }),
+        render() {
+            return h('div', null, [
+                h('h2', null, `当前计数:${this.data.num}`),
+                h('button', {
+                    onClick: () => {
+                        this.data.num++
+                    }
+                }, '+1'),
+                h('button', {
+                    onClick: () => {
+                        this.data.num--
+                    }
+                }, '-1')
+            ])
+        }
+    }
+
+    createApp(App).mount('#app')
+</script>
+</body>
+</html>
