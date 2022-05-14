@@ -28,10 +28,12 @@
                 h('h2', null, `${this.data.count}`),
                 h('button', {
                     // onClick: function () {
+                    //     console.log(this)
                     //     this.data.count++
                     // }
+
                     onClick: () => {
-                        console.log(this)
+                        console.log(this, '是指向上层作用域，render，render被rootComponent调用。rootComponent可以拿到data.count')
                         this.data.count++
                     }
                 }, "+1")
