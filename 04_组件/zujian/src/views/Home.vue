@@ -10,6 +10,10 @@ import child from "./child";
 
 export default {
   name: 'Home',
+  data(){
+    return {
+    }
+  },
   components: {
     child
   }
