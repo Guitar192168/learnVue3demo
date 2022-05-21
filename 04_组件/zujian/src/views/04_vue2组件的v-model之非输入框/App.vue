@@ -13,6 +13,21 @@
         prop:'checked',
         event:'change'
         }
+        这样一改就成了
+        子组件prop属性为checked
+        而子组件v-on的事件为change事件
+
+
+
+
+    ！！注意你仍然需要在组件的 props 选项里声明 checked 这个 prop。
+
+
+        <!--        <input-->
+<!--                type="checkbox"-->
+<!--                v-bind:checked="checked"-->
+<!--                v-on:change="$emit('change', $event.target.checked)"-->
+<!--        >-->
 
         <child v-model="isChecked"></child>
     </div>
