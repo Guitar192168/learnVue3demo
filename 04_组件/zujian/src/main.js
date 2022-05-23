@@ -11,7 +11,12 @@ import Vue from 'vue'
 // import App from './views/02_vue2双向绑定/App'
 // import App from './views/03_vue2组件的v-model/App'
 // import App from './views/04_vue2组件的v-model之非输入框/App'
-import App from './views/05_将原生事件绑定到组件上/App'
+// import App from './views/05_将原生事件绑定到组件上/App'
+// import App from './views/05_native将原生事件绑定到组件上/App'
+// import App from './views/06_先测试一下直接修改prop的值会不会影响到父级/App'
+// import App from './views/07_sync修饰符/App'
+
+import App from './views/09_插槽和作用域插槽/App'
 
 import router from './router'
 import store from './store'
