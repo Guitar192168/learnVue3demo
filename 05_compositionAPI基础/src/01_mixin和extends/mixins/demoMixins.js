@@ -17,3 +17,11 @@ export const mixinData = {
     }
   }
 }
+
+// 定义一个使用混入对象的组件
+// Vue.extend也使用同样的合并策略
+// var Component = Vue.extend({
+//   mixins: [myMixin]
+// })
+//
+// var component = new Component() // => "hello from mixin!"

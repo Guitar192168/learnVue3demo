@@ -17,9 +17,17 @@ import Vue from 'vue'
 // import App from './views/07_sync修饰符/App'
 
 // import App from './views/09_插槽和作用域插槽/App'
-import App from './views/09_插槽和作用域插槽/todoList'
+// import App from './views/09_插槽和作用域插槽/todoList'
 
 // import App from './views/10_动态组件监听emit/App'
+
+// import App from './views/12_处理边界情况/01_$root'
+
+
+// import App from './views/13_ref/App'
+// import App from './views/14_$once程序化的事件侦听器/App'
+// import App from './views/15_vue过渡/App'
+import App from './views/16_vue动画/App'
 
 import router from './router'
 import store from './store'
