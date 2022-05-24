@@ -16,7 +16,9 @@ import Vue from 'vue'
 // import App from './views/06_先测试一下直接修改prop的值会不会影响到父级/App'
 // import App from './views/07_sync修饰符/App'
 
-import App from './views/09_插槽和作用域插槽/App'
+// import App from './views/09_插槽和作用域插槽/App'
+
+import App from './views/10_动态组件监听emit/App'
 
 import router from './router'
 import store from './store'
