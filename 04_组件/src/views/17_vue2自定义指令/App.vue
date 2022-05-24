@@ -47,7 +47,7 @@ export default {
         /*
                 binding这里的参数
                 name是指令的名字，不包括v-这块
-                :isArg是arg是参数名
+                :isArg是arg是参数名 !!可以接受不同的参数了。动态的
                 .a.b这种修饰符 modifiers
                 ="message"中message是参数，是expression。它变了。才会触发的update和componentUpdated生命周期
 
