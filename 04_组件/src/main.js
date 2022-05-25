@@ -28,7 +28,9 @@ import Vue from 'vue'
 // import App from './views/14_$once程序化的事件侦听器/App'
 // import App from './views/15_vue过渡/App'
 // import App from './views/16_vue动画/App'
-import App from './views/17_vue2自定义指令/App'
+// import App from './views/17_vue2自定义指令/App'
+
+import App from './views/18_渲染和销售组件之key-for循环出两个组件/App'
 
 import router from './router'
 import store from './store'

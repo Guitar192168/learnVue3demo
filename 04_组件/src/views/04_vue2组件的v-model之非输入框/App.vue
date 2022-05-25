@@ -22,12 +22,15 @@
 
     ！！注意你仍然需要在组件的 props 选项里声明 checked 这个 prop。
 
-
         <!--        <input-->
 <!--                type="checkbox"-->
 <!--                v-bind:checked="checked"-->
 <!--                v-on:change="$emit('change', $event.target.checked)"-->
+<!--                @change="$emit('change', $event.target.checked)"-->
 <!--        >-->
+
+        <div>v-on:change和@change一样的</div>
+
 
         <child v-model="isChecked"></child>
     </div>

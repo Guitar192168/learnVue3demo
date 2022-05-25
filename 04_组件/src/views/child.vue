@@ -14,7 +14,8 @@
             demo() {
                 this.$emit('upload', {name: 1})
             }
-        }
+        },
+
     }
 </script>
 
