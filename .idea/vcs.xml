@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vue-next" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue-next-3.0.11" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vue2/vue" vcs="Git" />
   </component>
 </project>
