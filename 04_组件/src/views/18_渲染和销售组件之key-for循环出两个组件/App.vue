@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="item in children" :key="item.id">
+        <div demo="demo" v-for="item in children" :key="item.id">
             <component :is="item.name"></component>
         </div>
         <button @click="test">修改id</button>

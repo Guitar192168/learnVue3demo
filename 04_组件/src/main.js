@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// import App from './App.vue'
+// import App from './Home.vue'
 // import App from './views/01_基础/01_[]的v-bind动态属性写法'
 // import App from './views/01_基础/02_vm.$watch和主动停止'
 // import App from './views/01_基础/03_动态class'
@@ -30,7 +30,10 @@ import Vue from 'vue'
 // import App from './views/16_vue动画/App'
 // import App from './views/17_vue2自定义指令/App'
 
-import App from './views/18_渲染和销售组件之key-for循环出两个组件/App'
+// import App from './views/18_渲染和销售组件之key-for循环出两个组件/App'
+
+
+import App from './views/20_相同路由的组件如何重新渲染/App'
 
 import router from './router'
 import store from './store'

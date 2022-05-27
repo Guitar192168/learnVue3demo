@@ -2,14 +2,17 @@
     <div id="app">
 
         <!--    <div id="nav">-->
-        <!--      <router-link to="/">Home</router-link>-->
+              <router-link to="/">Home</router-link>
         <!--      |-->
-        <!--      <router-link to="/about">About</router-link>-->
+              <router-link to="/child">About</router-link>
         <!--    </div>-->
-<!--        这样就可以同时传更多参数-->
-        <child @upload="childUpload($event,'猫哥傻逼')"></child>
+        <!--        这样就可以同时传更多参数-->
+<!--        <child @upload="childUpload($event,'猫哥傻逼')"></child>-->
         <!--        <button v-bind:disabled="isButtonDisabled">Button</button>-->
 
+
+
+        <router-view></router-view>
     </div>
 </template>
 <script>
