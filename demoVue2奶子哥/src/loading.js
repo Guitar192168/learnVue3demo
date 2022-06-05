@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VLoading from "./VLoading";
 
-let LoadingInstance = Vue.extend(VLoading) //构造一个loading实例
+let LoadingInstance = Vue.extend(VLoading) //构造一个loading实例  子类
 const NewLoading = (obj = {})=> {
     return new LoadingInstance({ //初始化并且进行挂载
         el: document.createElement('div')
