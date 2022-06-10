@@ -10,7 +10,13 @@
 
 <script>
     export default {
-        name: "App.vue"
+        name: "App.vue",
+        beforeMount() {
+            console.log(this.$el)
+        },
+        mounted() {
+            console.log(this.$el)
+        }
     }
 </script>
 

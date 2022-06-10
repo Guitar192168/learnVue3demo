@@ -3350,7 +3350,7 @@ function generate (
   }
 }
 
-function genElement (el, state) {
+  function genElement (el, state) {
   if (el.parent) {
     el.pre = el.pre || el.parent.pre;
   }
