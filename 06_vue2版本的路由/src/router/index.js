@@ -6,6 +6,7 @@ import demo2 from '../components/demo2.vue'
 
 Vue.use(VueRouter)
 
+// 配置路由映射
 const routes = [
   {
     path: '/',
@@ -32,6 +33,7 @@ const routes = [
   }
 ]
 
+// 创建路由对象router
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

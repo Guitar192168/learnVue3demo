@@ -3,7 +3,7 @@
   <!-- <div>{{ num }}</div> -->
   <!-- <button @click="add">增加</button> -->
   <hr/>
-  <button @click="to">跳转</button>
+  <button @click="to 跳转</button>
   <button @click="demo">测试一下同名</button>
 
 </template>
