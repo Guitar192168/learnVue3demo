@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <div>哈哈</div>
+    <br>
+    <!--    <keep-alive>-->
       <router-view />
-    </keep-alive>
+    <br>
+    <div>你好</div>
+<!--    </keep-alive>-->
   </div>
 </template>
 

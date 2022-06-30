@@ -16,9 +16,9 @@ export default {
   created() {
     console.log(this.$route);
   },
-  activated() {
-    console.log('activated');
-  },
+  // activated() {
+  //   console.log('activated');
+  // },
   methods: {
     add() {
       this.value++

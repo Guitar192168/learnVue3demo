@@ -3,7 +3,7 @@
   <!-- <div>{{ num }}</div> -->
   <!-- <button @click="add">增加</button> -->
   <hr/>
-  <button @click="to 跳转</button>
+  <button @click="to"> 跳转</button>
   <button @click="demo">测试一下同名</button>
 
 </template>
@@ -27,9 +27,10 @@ export default {
       default: () => {
         return {name: 456}
       },
-      validator: function (value) {
-        return typeof value.name === this.num // props的优先级更高，拿不到data和computed里面的内容
-      }
+      // ??todo  有待考证!!  props的优先级更高，拿不到data和computed里面的内容
+      // validator: function (value) {
+      //   return typeof value.name === this.num // props的优先级更高，拿不到data和computed里面的内容
+      // }
     }
   },
   activated() {
