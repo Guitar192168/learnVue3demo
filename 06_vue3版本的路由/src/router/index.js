@@ -13,7 +13,8 @@ import {
 // const home = () => import('../views/Home.vue')
 
 // 配置映射对象
-const routes = [{
+const routes = [
+    {
         path: '/',
         // reLaunch:'/home',  // 错误写法
         redirect: '/home', // 重定向到  '/home'
@@ -38,6 +39,12 @@ const routes = [{
         // component: About
         // component: () => import('../views/About.vue')
         component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    // 动态属性
+    {
+        path:"/user/:username",
+        name:'user',
+        component: () => import('../views/user.vue')
     }
 ]
 

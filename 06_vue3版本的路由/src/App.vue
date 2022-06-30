@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/home"  active-class="yjq-active">Home</router-link>
+    <router-link to="/home" active-class="yjq-active">Home</router-link>
     |
     <router-link to="/about" active-class="yjq-active">About</router-link>
     <div>
@@ -28,8 +28,6 @@
 
 </script>
 <style>
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,18 +45,19 @@
   color: red;
 }
 
-.router-link-active{
+.router-link-active {
   /*  直接写, 不生效 应该是层级不够*/
 }
 
 #nav a.router-link-active {
   color: orange;
 }
-#nav a.yjq-active{
-  color:#008c8c;
+
+#nav a.yjq-active {
+  color: #008c8c;
 }
+
 /*#nav a.router-link-exact-active {*/
 /*  color: #42b983;*/
 /*}*/
-
 </style>
