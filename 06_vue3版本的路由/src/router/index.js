@@ -45,6 +45,14 @@ const routes = [
         path:"/user/:username",
         name:'user',
         component: () => import('../views/user.vue')
+    },
+    // 404 not found 页面
+    {
+        // path:matchMedia('*'), 错误写法
+
+        // path:"/:patchMatch(.*)",
+        path:"/:patchMatch(.*)*", // 多个星，变数组
+        component:() => import('../views/notFound')
     }
 ]
 
