@@ -3,6 +3,7 @@
     <h1>This is an about page</h1>
     {{ value }}
     <button @click="add">添加</button>
+    <router-view />
   </div>
 </template>
 <script>

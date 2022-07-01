@@ -13,8 +13,7 @@ import {
 // const home = () => import('../views/Home.vue')
 
 // 配置映射对象
-const routes = [
-    {
+const routes = [{
         path: '/',
         // reLaunch:'/home',  // 错误写法
         redirect: '/home', // 重定向到  '/home'
@@ -38,21 +37,25 @@ const routes = [
         // component属性，可以接收一个函数，但是这个函数要求返回一个promise。  import('../').then(res => {console.log(res)})
         // component: About
         // component: () => import('../views/About.vue')
-        component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
+        component: () => import( /* webpackChunkName: "about" */ '../views/About.vue'),
+        // 嵌套路由
+        children: [{
+            path: 'detail', // 这里不需要 /detail 或者  /about/detail 
+            component: () => import('../views/detail.vue')
+        }]
     },
     // 动态属性
     {
-        path:"/user/:username",
-        name:'user',
+        path: "/user/:username",
+        name: 'user',
         component: () => import('../views/user.vue')
     },
     // 404 not found 页面
     {
         // path:matchMedia('*'), 错误写法
-
-        // path:"/:patchMatch(.*)",
-        path:"/:patchMatch(.*)*", // 多个星，变数组
-        component:() => import('../views/notFound')
+        // path:"/:patchMatch(.*)",  
+        path: "/:patchMatch(.*)*", // 这里多写个星，变数组，拿到的值就会变成数组
+        component: () => import('../views/notFound')
     }
 ]
 
