@@ -22,6 +22,14 @@
     <!--      </keep-alive>-->
     <!--    </router-view>-->
 
+
+    <!--  还有个属性 router-link-exact-active 
+
+      如果路径全匹配，则自动添加这个属性
+
+      如果只是部分匹配 如 home/detail为全路径
+      但是只匹配了 /home  则只自动添加上 router-link-active 属性
+    -->
   </div>
 </template>
 <script>
