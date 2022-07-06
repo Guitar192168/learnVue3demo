@@ -5,7 +5,7 @@
   <hr />
   <button @click="to"> 跳转</button>
   <button @click="demo">测试一下同名</button>
-  <button @click="vue3Button">导航式跳转</button>
+  <button @click="vue3Button">编程式导航</button>
   <button @click="vue3Button2">前进一步</button>
 
 </template>

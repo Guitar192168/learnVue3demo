@@ -66,4 +66,26 @@ const router = createRouter({
     routes
 })
 
+const addHome = () => import('../views/addHome.vue')
+
+// 动态添加路由
+// router.addRoute('/addHome', addHome)
+router.addRoute({
+    path: '/addHome',
+    component: addHome
+})
+
+const addChildHome = () => import('../views/addChildHome.vue');
+
+//动态添加二级路由
+// router.addRoute({
+//     name: 'Home',
+//     path: '/addChildHome',
+//     component: addChildHome
+// })
+
+router.addRoute('Home', {
+    path: 'addChildHome',
+    component: addChildHome
+})
 export default router

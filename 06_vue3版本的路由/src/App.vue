@@ -1,6 +1,18 @@
 <template>
   <div id="nav">
-    <router-link to="/home" active-class="yjq-active">Home</router-link>
+    <input type="text" @change="demo" :value="inputValue">
+
+    <hr>
+
+    <!-- tag元素，vue3版本已经废弃   tag="button"  原本会渲染成a链接的router-link 最终渲染成了 button元素 -->
+    <router-link to="/home" active-class="yjq-active">
+      <template v-slot:default>
+        <button>
+          Home
+        </button>
+        <button> 还可以展示组件</button>
+      </template>
+    </router-link>
     |
     <router-link to="/about" active-class="yjq-active">About</router-link>
     <div>
@@ -30,10 +42,37 @@
       如果只是部分匹配 如 home/detail为全路径
       但是只匹配了 /home  则只自动添加上 router-link-active 属性
     -->
+
+    <button @click="testAddRoute">测试动态路由</button>
+    <hr>
+    <button @click="testAddChildRoute">测试动态添加二级路由</button>
   </div>
 </template>
 <script>
+import { useRoute, ref } from 'vue-router';
 
+export default {
+  setup() {
+    con
+    const router = useRouter()
+    const testAddRoute = () => {
+      router.push('/addHome')
+    }
+
+    const testAddChildRoute = () => {
+      router.push('/home/addChildHome')
+    }
+
+    const demo = () => {
+
+    }
+
+    return {
+      testAddRoute,
+      testAddChildRoute
+    }
+  }
+}
 </script>
 <style>
 #app {
