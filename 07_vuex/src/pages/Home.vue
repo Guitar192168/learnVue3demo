@@ -8,6 +8,17 @@
 </template>
 <script>
 export default {
+  data(){
+    return {
+      age: 19
+    }
+  },
+  props:{
+    message: {
+      type: Object,
+      default: () => ({})
+    }
+  },
   methods: {
     submitAction() {
       console.log(this.$store, "this.$store");

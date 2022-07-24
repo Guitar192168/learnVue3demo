@@ -49,11 +49,10 @@
   </div>
 </template>
 <script>
-import { useRoute, ref } from 'vue-router';
+import {useRouter, ref} from 'vue-router';
 
 export default {
   setup() {
-    con
     const router = useRouter()
     const testAddRoute = () => {
       router.push('/addHome')
